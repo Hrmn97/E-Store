@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const Navbar = () => {
   return (
-    <div className="navbar flex flex-row justify-between mt-2">
+    <div className="navbar flex flex-row justify-between mt-4">
       <div className="left flex items-center gap-x-4 h-8 ml-2 text-lg">
         <div className="item flex items-center gap-x-1 h-8">
           <img src="/img/flag.png" alt="Flag" />

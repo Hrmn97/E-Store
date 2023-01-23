@@ -1,7 +1,12 @@
 import React from "react";
+import Slider from "../../components/Slider/Slider";
 
 const Home = () => {
-  return <div className="text-3xl font-bold underline">Home</div>;
+  return (
+    <div>
+      <Slider />
+    </div>
+  );
 };
 
 export default Home;

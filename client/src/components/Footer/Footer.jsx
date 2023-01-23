@@ -52,13 +52,13 @@ const Footer = () => {
           </span>
         </div>
         <div className="right space-x-4 flex justify-end mr-24">
-          <span className="space-x-4">
-            <i class="fa-brands fa-3x fa-cc-apple-pay"></i>
-            <i class="fa-brands fa-3x fa-google-pay"></i>
-            <i class="fa-brands fa-3x fa-paypal"></i>
-            <i class="fa-brands fa-3x fa-amazon-pay"></i>
-            <i class="fa-brands fa-3x fa-alipay"></i>
-            <i class="fa-brands fa-3x fa-bitcoin"></i>
+          <span className="space-x-8">
+            <i className="fa-brands fa-2x fa-cc-apple-pay"></i>
+            <i className="fa-brands fa-2x fa-google-pay"></i>
+            <i className="fa-brands fa-2x fa-paypal"></i>
+            <i className="fa-brands fa-2x fa-amazon-pay"></i>
+            <i className="fa-brands fa-2x fa-alipay"></i>
+            <i className="fa-brands fa-2x fa-bitcoin"></i>
           </span>
         </div>
       </div>
