@@ -1,15 +1,17 @@
 import React from "react";
 import Categories from "../../components/Categories/Categories";
-// import Slider from "../../components/Slider/Slider";
+import Slider from "../../components/Slider/Slider";
 import FeaturedProducts from "../../components/FeaturedProducts/FeaturedProducts";
+import Contact from "../../components/Contact/Contact";
 
 const Home = () => {
   return (
     <div>
-      {/* <Slider /> */}
+      <Slider />
       <FeaturedProducts type="Featured" />
       <Categories />
       <FeaturedProducts type="Trending" />
+      <Contact />
     </div>
   );
 };

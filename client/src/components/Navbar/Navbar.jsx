@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import Cart from "../Cart/Cart";
 
 const Navbar = () => {
+  const [open, setOpen] = useState(false);
   return (
     <div className="navbar flex flex-row justify-between mt-4">
       <div className="left flex items-center gap-x-4 h-8 ml-2 text-lg">
@@ -43,7 +45,7 @@ const Navbar = () => {
           <i className="fa-solid fa-magnifying-glass cursor-pointer"></i>
           <i className="fa-solid fa-user cursor-pointer"></i>
           <i className="fa-solid fa-heart cursor-pointer"></i>
-          <div className="carticon">
+          <div className="carticon" onClick={() => setOpen(!open)}>
             <i className="fa-solid fa-cart-shopping cursor-pointer"></i>
             <span className="border bg-sky-500 text-white border-sky-500 text-base mb-4 items-center mr-2 rounded-full">
               00
@@ -51,6 +53,7 @@ const Navbar = () => {
           </div>
         </div>
       </div>
+      {open && <Cart />}
     </div>
   );
 };

@@ -5,7 +5,7 @@ const Card = ({ item }) => {
   return (
     <div>
       <Link className="Link" to={`/product/${item.id}`}>
-        <div className="card w-56 flex flex-col gap-4">
+        <div className="card mb-12 w-56 flex flex-col gap-4">
           <div className="image w-full h-72 overflow-hidden transition-all duration-700 card relative hover:z-20">
             {item.isNew && (
               <span className="absolute left-1 top-1 pt-0.5 pb-0.5 pl-1 pr-1 bg-white text-emerald-600 text-sm font-medium z-30">

@@ -16,21 +16,29 @@ const Slider = () => {
     setCurrentIndex(currentIndex === 0 ? 3 : currentIndex - 1);
   };
   return (
-    <div className="slider flex flex-col ">
-      <div className="main flex flex-row mt-6 transition-all ease-in">
-        <img
-          src={data[currentIndex]}
-          alt="store"
-          style={{ width: "100%", height: 730 }}
-          className="shrink-0"
-        />
+    <div className="slider w-screen h-[calc(100vh_-_80px)] mt-6 relative overflow-hidden ">
+      <div
+        className="main w-[400vw] h-full flex transition-all ease-in-out duration-1000"
+        style={{ transform: `translateX(-${currentIndex * 100}vw)` }}
+      >
+        <img className="h-full w-[100vw] object-cover" src={data[0]} alt="" />
+        <img className="h-full w-[100vw] object-cover" src={data[1]} alt="" />
+        <img className="h-full w-[100vw] object-cover" src={data[2]} alt="" />
+        <img className="h-full w-[100vw] object-cover" src={data[3]} alt="" />
       </div>
-      <div className="icons absolute flex gap-3 justify-center inset-x-0 bottom-0">
-        <div className="icon" onClick={handlePrevious}>
-          <i className="fa-solid fa-circle-arrow-left fa-2x"></i>
+      <div className="icons gap-2.5 absolute w-fit inset-x-0 flex bottom-[50px] m-auto">
+        <div
+          onClick={handlePrevious}
+          className="icon w-12 h-12 border border-solid border-gray-900 flex items-center justify-center cursor-pointer "
+        >
+          {" "}
+          <i className="fa-solid fa-arrow-left fa-2x"></i>
         </div>
-        <div className="icon" onClick={handleNext}>
-          <i className="fa-solid fa-circle-arrow-right fa-2x"></i>
+        <div
+          onClick={handleNext}
+          className="icon w-12 h-12 border border-solid border-gray-900 flex items-center justify-center cursor-pointer"
+        >
+          <i className="fa-solid fa-arrow-right fa-2x"></i>
         </div>
       </div>
     </div>
