@@ -15,4 +15,6 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Build the Docker image
-      run: docker build client/ --file Dockerfile --tag harman97:$(date +%s)
+      run: |
+           cd client
+           docker build . --file Dockerfile --tag harman97:$(date +%s)
